@@ -168,7 +168,7 @@ pub unsafe extern "C" fn handle() {
 
         // Output has to be wrapped in type ChannelOutput::MessageList in order to be properly decoded
         // TODO: Fill in the variable to be returned
-        msg::reply(ChannelOutput::MessageList(???), exec::gas_available() - GAS_RESERVE, 0);
+        msg::reply(ChannelOutput::MessageList(???), 0, 0);
       }
       ChannelAction::Subscribe => {
         // TODO: Fill in the subscriber's ID
@@ -178,7 +178,7 @@ pub unsafe extern "C" fn handle() {
         debug!("Added a new subscriber: {:?}", ???);
 
         // Output has to be wrapped in type ChannelOutput::SingleMessage in order to be properly decoded
-        msg::reply(ChannelOutput::SingleMessage(success_msg), exec::gas_available() - GAS_RESERVE, 0);
+        msg::reply(ChannelOutput::SingleMessage(success_msg), 0, 0);
       }
       ChannelAction::Unsubscribe => {
         // TODO: Fill in the subscriber's ID
@@ -188,7 +188,7 @@ pub unsafe extern "C" fn handle() {
         debug!("Removed a subscriber: {:?}", ???);
 
         // Output has to be wrapped in type ChannelOutput::SingleMessage in order to be properly decoded
-        msg::reply(ChannelOutput::SingleMessage(success_msg), exec::gas_available() - GAS_RESERVE, 0);
+        msg::reply(ChannelOutput::SingleMessage(success_msg), 0, 0);
       }
       ChannelAction::Post(text) => {
         // Make sure only the owner of the channel can add posts to it
@@ -216,7 +216,7 @@ pub unsafe extern "C" fn handle() {
 
         debug!("Added a new post to the channel.");
 
-        msg::reply(ChannelOutput::SingleMessage(success_msg), exec::gas_available() - GAS_RESERVE, 0);
+        msg::reply(ChannelOutput::SingleMessage(success_msg), 0, 0);
       }
     }
 
