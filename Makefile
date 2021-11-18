@@ -6,7 +6,6 @@ all:
 	ls -la ./target/wasm32-unknown-unknown/release/gear_feeds_channel*.wasm
 
 prepare:
-	rustup update
-	rustup update nightly
+	rustup toolchain add nightly
 	rustup target add wasm32-unknown-unknown --toolchain nightly
 	cargo install --git https://github.com/gear-tech/gear wasm-proc
