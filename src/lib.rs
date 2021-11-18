@@ -130,12 +130,12 @@ static mut STATE: State = State {
 #[no_mangle]
 pub unsafe extern "C" fn init() {
     STATE.set_owner_id(msg::source());
-    // TODO: Change the channel name
+    // ⚠️ TODO: Change the channel name
     STATE.set_name("Channel-Coolest-Name");
-    // TODO: Change the channel description
+    // ⚠️ TODO: Change the channel description
     STATE.set_description("Channel-Coolest-Description");
 
-    // TODO: Change the init message
+    // ⚠️ TODO: Change the init message
     let init_message = Message::new(format!("Channel {:?} was created", STATE.name()));
 
     STATE.add_message(init_message);
@@ -175,7 +175,7 @@ pub unsafe extern "C" fn handle() {
             debug!("CHANNEL {:?}: Meta sent", STATE.name())
         }
         ChannelAction::Subscribe => {
-            // TODO: Add a subscriber and reply
+            // ⚠️ TODO: Add a subscriber and reply
 
             debug!("CHANNEL {:?}: Subscriber added", STATE.name())
         }
