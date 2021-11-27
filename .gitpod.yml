@@ -1,0 +1,7 @@
+tasks:
+  - before: |
+      echo 'export CARGO_HOME="/home/gitpod/.cargo"' >> ~/.bashrc
+      source ~/.bashrc
+vscode:
+  extensions:
+    - matklad.rust-analyzer
