@@ -1,3 +1,22 @@
+<div align="center">
+
+[![Build][build_badge]][build_href]
+[![License][lic_badge]][lic_href]
+
+[build_badge]: https://github.com/gear-tech/gear-feeds-channel/workflows/Build/badge.svg
+[build_href]: https://github.com/gear-tech/gear-feeds-channel/actions/workflows/build.yaml
+
+[lic_badge]: https://img.shields.io/badge/License-GPL%203.0-success
+[lic_href]: https://github.com/gear-tech/gear-feeds-channel/blob/master/LICENSE
+
+</div>
+
+<p align="center">
+  <a href="https://gitpod.io/#https://github.com/gear-tech/gear-feeds-channel">
+    <img src="https://gitpod.io/button/open-in-gitpod.svg" width="240" alt="GEAR">
+  </a>
+</p>
+
 # 📰 Gear Feeds Channel
 
 An example of a feeds channel program.
