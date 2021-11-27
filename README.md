@@ -4,7 +4,7 @@
 [![License][lic_badge]][lic_href]
 
 [build_badge]: https://github.com/gear-tech/gear-feeds-channel/workflows/Build/badge.svg
-[build_href]: https://github.com/gear-tech/gear-feeds-channel/actions/workflows/build.yaml
+[build_href]: https://github.com/gear-tech/gear-feeds-channel/actions/workflows/build.yml
 
 [lic_badge]: https://img.shields.io/badge/License-GPL%203.0-success
 [lic_href]: https://github.com/gear-tech/gear-feeds-channel/blob/master/LICENSE
