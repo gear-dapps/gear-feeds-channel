@@ -44,7 +44,7 @@ pub unsafe extern "C" fn init() {
     debug!("Channel {:?} initialized successfully!", STATE.name());
 }
 
-// 5️⃣ Init function that is executed once upon contract initialization
+// 5️⃣ Handle function that processes the incoming message
 #[no_mangle]
 pub unsafe extern "C" fn handle() {
     let action: ChannelAction = msg::load().expect(&format!(
