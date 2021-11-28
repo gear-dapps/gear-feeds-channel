@@ -1,4 +1,10 @@
-<div align="center">
+<p align="center">
+  <a href="https://gitpod.io/#https://github.com/gear-tech/gear-feeds-channel">
+    <img src="https://gitpod.io/button/open-in-gitpod.svg" width="240" alt="GEAR">
+  </a>
+</p>
+
+# 📰 Gear Feeds Channel
 
 [![Build][build_badge]][build_href]
 [![License][lic_badge]][lic_href]
@@ -9,19 +15,17 @@
 [lic_badge]: https://img.shields.io/badge/License-GPL%203.0-success
 [lic_href]: https://github.com/gear-tech/gear-feeds-channel/blob/master/LICENSE
 
-</div>
-
-<p align="center">
-  <a href="https://gitpod.io/#https://github.com/gear-tech/gear-feeds-channel">
-    <img src="https://gitpod.io/button/open-in-gitpod.svg" width="240" alt="GEAR">
-  </a>
-</p>
-
-# 📰 Gear Feeds Channel
-
 An example of a feeds channel program.
 
-## Getting Started
+## Prebuilt Binaries
+
+➡️ https://github.com/gear-tech/gear-feeds-channel/releases/tag/build
+
+- Output WASM: [gear_feeds_channel.wasm](https://github.com/gear-tech/gear-feeds-channel/releases/download/build/gear_feeds_channel.wasm)
+- Optimized WASM: [gear_feeds_channel.opt.wasm](https://github.com/gear-tech/gear-feeds-channel/releases/download/build/gear_feeds_channel.opt.wasm)
+- Meta WASM: [gear_feeds_channel.meta.wasm](https://github.com/gear-tech/gear-feeds-channel/releases/download/build/gear_feeds_channel.meta.wasm)
+
+## Building Locally
 
 ### ⚙️ Install Rust
 
