@@ -2,8 +2,8 @@ tasks:
   - before: |
       echo 'export CARGO_HOME="/home/gitpod/.cargo"' >> ~/.bashrc
       source ~/.bashrc
-    init:
-      code src/lib.rs
+    init: |
+      gp open src/lib.rs
 
 vscode:
   extensions:

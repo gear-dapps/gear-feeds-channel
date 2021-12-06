@@ -64,6 +64,36 @@ wasm-proc --path ./target/wasm32-unknown-unknown/release/gear_feeds_channel.wasm
 make
 ```
 
+## Using
+
+### 📦 Install Polkadot.js Extension
+
+Download and install Polkadot.js browser extension: https://polkadot.js.org/extension/
+
+### 👛 Create Account
+
+Create a new account using Polkadot.js extension. **Don't forget to save the mnemonic seed phrase and password in a safe place.**
+
+### ✉️ Upload the Program
+
+- Go to https://idea.gear-tech.io/
+- Connect to your account using the **Connect** button. Allow website access to your wallet in Polkadot.js extension.
+- Upload the program (`.opt.wasm`) and metadata (`.meta.wasm`) giving some meaninful name to the program and setting the gas limit to `100'000'000`. Sign the transaction using Polkadot.js extension.
+- Find the program in **Recently uploaded programs** section and copy its address.
+
+### 📒 Register your Feeds Channel in Feeds Router
+
+- Find the Feeds Router program in the **All programs** section and open the message sending form.
+- Paste your program address (copied at the previous step) as the `address` field value in the **Payload** text area.
+- Set the **Gas limit** to `1000'000'000` and click **Send request**. Sign the transaction using Polkadot.js extension.
+
+### ✨ Enjoy your Program
+
+- Go to https://workshop.gear-tech.io/
+- Connect to your account using the **Connect** button. Allow website access to your wallet in Polkadot'js extension.
+- Find your newly created channel.
+- You can post a message, subscribe to other channels, and view their posts.
+
 ## License
 
 The source code is licensed under [GPL v3.0 license](LICENSE).
