@@ -20,7 +20,9 @@ jobs:
         uses: Swatinem/rust-cache@v1
 
       - name: Prepare
-        run: make prepare
+        run: |
+          wget -O ~/.cargo/bin/wasm-proc https://github.com/gear-tech/gear/releases/download/build/wasm-proc
+          chmod +x ~/.cargo/bin/wasm-proc
 
       - name: Build
         run: make
