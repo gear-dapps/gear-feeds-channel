@@ -78,6 +78,7 @@ Create a new account using Polkadot.js extension. **Don't forget to save the mne
 
 - Go to https://idea.gear-tech.io/
 - Connect to your account using the **Connect** button. Allow website access to your wallet in Polkadot.js extension.
+- Top up yout test account using the **Get test account** button. This button can be pressed several times.
 - Upload the program (`.opt.wasm`) and metadata (`.meta.wasm`) giving some meaninful name to the program and setting the gas limit to `100'000'000`. Sign the transaction using Polkadot.js extension.
 - Find the program in **Recently uploaded programs** section and copy its address.
 
@@ -85,7 +86,7 @@ Create a new account using Polkadot.js extension. **Don't forget to save the mne
 
 - Find the Feeds Router program in the **All programs** section and open the message sending form.
 - Paste your program address (copied at the previous step) as the `address` field value in the **Payload** text area.
-- Set the **Gas limit** to `1000'000'000` and click **Send request**. Sign the transaction using Polkadot.js extension.
+- Set the **Gas limit** to `500'000'000` and click **Send request**. Sign the transaction using Polkadot.js extension.
 
 ### ✨ Enjoy your Program
 
