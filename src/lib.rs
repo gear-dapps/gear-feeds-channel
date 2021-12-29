@@ -1,7 +1,7 @@
 #![no_std]
 
 // 1️⃣ External packages (crates) and internal modules import
-use gstd::{debug, exec, msg, prelude::*};
+use gstd::{debug, msg, prelude::*};
 
 mod common;
 mod state;
@@ -62,7 +62,7 @@ pub unsafe extern "C" fn handle() {
                 STATE.owner(),
             ));
 
-            msg::reply(meta, exec::gas_available() - 100_000_000, 0);
+            msg::reply(meta, 0, 0);
 
             debug!("CHANNEL {:?}: Meta sent", STATE.name())
         }
