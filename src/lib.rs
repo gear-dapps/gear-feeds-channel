@@ -62,7 +62,7 @@ pub unsafe extern "C" fn handle() {
                 STATE.owner(),
             ));
 
-            msg::reply(meta, 0, 0);
+            msg::reply(meta, 100_000_000, 0);
 
             debug!("CHANNEL {:?}: Meta sent", STATE.name())
         }
