@@ -86,7 +86,7 @@ Create a new account using Polkadot.js extension. **Don't forget to save the mne
 
 - Find the Feeds Router program in the **All programs** section and open the message sending form.
 - Paste your program address (copied at the previous step) as the `address` field value in the **Payload** text area.
-- Set the **Gas limit** to `500'000'000` and click **Send request**. Sign the transaction using Polkadot.js extension.
+- Set the **Gas limit** to `1,000'000'000` and click **Send request**. Sign the transaction using Polkadot.js extension.
 
 ### ✨ Enjoy your Program
 
