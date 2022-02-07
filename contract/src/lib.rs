@@ -6,7 +6,7 @@ use gstd::{debug, msg, prelude::*};
 mod common;
 mod state;
 
-use common::{ChannelAction, ChannelOutput, Message, Meta};
+use common::*;
 use state::State;
 
 pub use state::meta_state;
@@ -68,7 +68,6 @@ pub unsafe extern "C" fn handle() {
         }
         ChannelAction::Subscribe => {
             // ⚠️ TODO: Add a subscriber and reply
-
             debug!("CHANNEL {:?}: Subscriber added", STATE.name())
         }
         ChannelAction::Unsubscribe => {
@@ -86,7 +85,7 @@ pub unsafe extern "C" fn handle() {
             let message = Message::new(text);
 
             STATE.add_message(message.clone());
-
+        
             for sub in STATE.subs() {
                 msg::send(sub, ChannelOutput::SingleMessage(message.clone()), 0, 0);
             }
