@@ -3,8 +3,8 @@ use gtest::{Program, System};
 #[path = "../src/common.rs"]
 mod common;
 use common::*;
-const OWNER: [u8; 32] =  [1; 32];
-const SUBSCRIBER: [u8; 32] =  [2; 32];
+const OWNER: [u8; 32] = [1; 32];
+const SUBSCRIBER: [u8; 32] = [2; 32];
 
 fn init_with_msg(sys: &System) {
     let feeds_channel = Program::from_file(
@@ -39,10 +39,7 @@ fn meta() {
         owner_id: OWNER.into(),
     };
 
-    assert!(res.contains(&(
-        OWNER,
-        ChannelOutput::Metadata(meta).encode()
-    )));
+    assert!(res.contains(&(OWNER, ChannelOutput::Metadata(meta).encode())));
 }
 
 #[test]
@@ -52,14 +49,14 @@ fn subscribe_and_unsubscribe() {
     init_with_msg(&sys);
 
     let feeds_channel = sys.get_program(1);
-    // subscribes to the channel 
+    // subscribes to the channel
     feeds_channel.send(SUBSCRIBER, ChannelAction::Subscribe);
 
-    // ⚠️ TODO: Change the post message 
+    // ⚠️ TODO: Change the post message
     let res = feeds_channel.send(OWNER, ChannelAction::Post("hello".to_string()));
 
-    // checks that the message was sent to the owner 
-    // ⚠️ TODO: Change the received message 
+    // checks that the message was sent to the owner
+    // ⚠️ TODO: Change the received message
     assert!(res.contains(&(
         OWNER,
         ChannelOutput::SingleMessage(Message {
@@ -70,7 +67,7 @@ fn subscribe_and_unsubscribe() {
     )));
 
     // checks that the message was sent to the subscriber
-    // ⚠️ TODO: Change the received message 
+    // ⚠️ TODO: Change the received message
     assert!(res.contains(&(
         SUBSCRIBER,
         ChannelOutput::SingleMessage(Message {
@@ -80,7 +77,7 @@ fn subscribe_and_unsubscribe() {
         .encode()
     )));
 
-    // unsubscribes from the channel 
+    // unsubscribes from the channel
     feeds_channel.send(SUBSCRIBER, ChannelAction::Unsubscribe);
 
     let res = feeds_channel.send(OWNER, ChannelAction::Post("hello".to_string()));
@@ -103,7 +100,7 @@ fn check_for_failure() {
     init_with_msg(&sys);
 
     let feeds_channel = sys.get_program(1);
-   
+
     // must fails since a subscriber is not the channel owner
     let res = feeds_channel.send(SUBSCRIBER, ChannelAction::Post("hello".to_string()));
     assert!(res.main_failed());

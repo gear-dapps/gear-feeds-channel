@@ -4,7 +4,7 @@ all:
 	cargo +nightly build --target wasm32-unknown-unknown --release
 	wasm-proc --path ./target/wasm32-unknown-unknown/release/gear_feeds_channel.wasm
 	ls -la ./target/wasm32-unknown-unknown/release/gear_feeds_channel*.wasm
-	
+
 check: all
 	@cargo +nightly test --workspace
 

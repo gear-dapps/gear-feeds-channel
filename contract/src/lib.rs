@@ -85,7 +85,7 @@ pub unsafe extern "C" fn handle() {
             let message = Message::new(text);
 
             STATE.add_message(message.clone());
-        
+
             for sub in STATE.subs() {
                 msg::send(sub, ChannelOutput::SingleMessage(message.clone()), 0, 0);
             }
