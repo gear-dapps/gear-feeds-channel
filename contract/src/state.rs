@@ -3,7 +3,7 @@ use gstd::{
     ActorId,
 };
 
-use crate::common::Message;
+use crate::Message;
 use circular_buffer::CircularBuffer;
 use codec::Encode;
 use primitive_types::H256;
