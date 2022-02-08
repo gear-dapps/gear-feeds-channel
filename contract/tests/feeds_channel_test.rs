@@ -3,6 +3,7 @@ use gtest::{Program, System};
 #[path = "../src/common.rs"]
 mod common;
 use common::*;
+
 const OWNER: [u8; 32] = [1; 32];
 const SUBSCRIBER: [u8; 32] = [2; 32];
 
