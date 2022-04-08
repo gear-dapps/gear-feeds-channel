@@ -62,7 +62,7 @@ cargo build --release
 make
 ```
 
-### 🏗️ Run tests
+### ✅ Run tests
 
 ```shell
 cargo test
