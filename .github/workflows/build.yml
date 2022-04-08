@@ -26,11 +26,6 @@ jobs:
           components: clippy, rustfmt
           target: wasm32-unknown-unknown
 
-      - name: Prepare
-        run: |
-          wget -O ~/.cargo/bin/wasm-proc https://github.com/gear-tech/gear/releases/download/build/wasm-proc
-          chmod +x ~/.cargo/bin/wasm-proc
-
       - name: Build
         run: make
 
