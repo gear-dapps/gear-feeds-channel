@@ -4,7 +4,3 @@ resolver = "2"
 members = [
     "contract",
 ]
-
-[profile.release]
-lto = true
-opt-level = "s"

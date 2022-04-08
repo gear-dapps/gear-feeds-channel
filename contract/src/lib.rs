@@ -62,7 +62,7 @@ pub unsafe extern "C" fn handle() {
                 STATE.owner(),
             ));
 
-            msg::reply(meta, 100_000_000, 0);
+            msg::reply(meta, 0);
 
             debug!("CHANNEL {:?}: Meta sent", STATE.name())
         }
@@ -73,7 +73,7 @@ pub unsafe extern "C" fn handle() {
         ChannelAction::Unsubscribe => {
             STATE.remove_subscriber(msg::source());
 
-            msg::reply((), 0, 0);
+            msg::reply((), 0);
 
             debug!("CHANNEL {:?}: Subscriber removed", STATE.name())
         }
@@ -87,10 +87,10 @@ pub unsafe extern "C" fn handle() {
             STATE.add_message(message.clone());
 
             for sub in STATE.subs() {
-                msg::send(sub, ChannelOutput::SingleMessage(message.clone()), 0, 0);
+                msg::send(sub, ChannelOutput::SingleMessage(message.clone()), 0);
             }
 
-            msg::reply((), 0, 0);
+            msg::reply((), 0);
 
             debug!("Added a post: {:?}", message);
         }

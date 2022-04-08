@@ -38,7 +38,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```shell
 rustup toolchain add nightly
 rustup target add wasm32-unknown-unknown --toolchain nightly
-cargo install --git https://github.com/gear-tech/gear wasm-proc
 ```
 
 ... or ...
@@ -54,14 +53,25 @@ Open [`src/lib.rs`](src/lib.rs) and address all `TODO`s there.
 ### 🏗️ Build
 
 ```shell
-cargo +nightly build --target wasm32-unknown-unknown --release
-wasm-proc --path ./target/wasm32-unknown-unknown/release/gear_feeds_channel.wasm
+cargo build --release
 ```
 
 ... or ...
 
 ```shell
 make
+```
+
+### 🏗️ Run tests
+
+```shell
+cargo test
+```
+
+... or ...
+
+```shell
+make check
 ```
 
 ## Using
