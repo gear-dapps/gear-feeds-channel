@@ -1,14 +1,14 @@
 tasks:
   - before: |
       rm -rf $HOME/.cargo
-      echo 'unset CARGO_HOME' >> ~/.bashrc
-      source ~/.bashrc
-      curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-      1
+      unset CARGO_HOME
+      curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
       source $HOME/.cargo/env
+      echo 'export CARGO_HOME="$HOME/.cargo"' >> ~/.bashrc
+      source ~/.bashrc
     init: |
       gp open contract/src/lib.rs
-      clear
+      clear && printf '\e[3J'
 
 vscode:
   extensions:
