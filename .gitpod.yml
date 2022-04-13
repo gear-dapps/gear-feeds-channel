@@ -8,7 +8,7 @@ tasks:
       source ~/.bashrc
     init: |
       gp open contract/src/lib.rs
-      clear && printf '\e[3J'
+      clear && printf '\e[3J' && history -c
 
 vscode:
   extensions:

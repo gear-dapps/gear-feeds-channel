@@ -43,7 +43,7 @@ rustup target add wasm32-unknown-unknown --toolchain nightly
 ... or ...
 
 ```shell
-make prepare
+make init
 ```
 
 ### ✍️ Edit the program
@@ -59,7 +59,7 @@ cargo build --release
 ... or ...
 
 ```shell
-make
+make build
 ```
 
 ### ✅ Run tests
@@ -71,7 +71,19 @@ cargo test
 ... or ...
 
 ```shell
-make check
+make test
+```
+
+### Run everything with one command
+
+```shell
+make all
+```
+
+... or ...
+
+```shell
+make
 ```
 
 ## Using
