@@ -1,9 +1,14 @@
 tasks:
   - before: |
-      echo 'export CARGO_HOME="/home/gitpod/.cargo"' >> ~/.bashrc
+      rm -rf $HOME/.cargo
+      unset CARGO_HOME
+      curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+      source $HOME/.cargo/env
+      echo 'export CARGO_HOME="$HOME/.cargo"' >> ~/.bashrc
       source ~/.bashrc
     init: |
       gp open contract/src/lib.rs
+      clear && printf '\e[3J' && history -c
 
 vscode:
   extensions:

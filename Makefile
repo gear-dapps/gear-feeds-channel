@@ -1,12 +1,16 @@
-.PHONY: all prepare
+.PHONY: all
+all: init build test
 
-all:
-	cargo build --release
-	ls -la ./target/wasm32-unknown-unknown/release/gear_feeds_channel*.wasm
+.PHONY: build
+build:
+	@ cargo build --workspace --release
+	@ ls -l ./target/wasm32-unknown-unknown/release/*.wasm
 
-check: all
-	@cargo test --workspace --release
+.PHONY: test
+test:
+	@ cargo test --workspace --release
 
-prepare:
-	rustup toolchain add nightly
-	rustup target add wasm32-unknown-unknown --toolchain nightly
+.PHONY: init
+init:
+	@ rustup toolchain add nightly
+	@ rustup target add wasm32-unknown-unknown --toolchain nightly
