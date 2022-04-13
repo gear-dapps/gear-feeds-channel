@@ -1,15 +1,5 @@
 tasks:
   - before: |
-      echo 'export CARGO_HOME="/home/gitpod/.cargo"' >> ~/.bashrc
-      source ~/.bashrc
-    init: |
-      gp open contract/src/lib.rs
-
-vscode:
-  extensions:
-    - matklad.rust-analyzer
-tasks:
-  - before: |
       rm -rf $HOME/.cargo
       echo 'unset CARGO_HOME' >> ~/.bashrc
       source ~/.bashrc
