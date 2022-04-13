@@ -8,3 +8,18 @@ tasks:
 vscode:
   extensions:
     - matklad.rust-analyzer
+tasks:
+  - before: |
+      rm -rf $HOME/.cargo
+      echo 'unset CARGO_HOME' >> ~/.bashrc
+      source ~/.bashrc
+      curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+      1
+      source $HOME/.cargo/env
+    init: |
+      gp open contract/src/lib.rs
+      clear
+
+vscode:
+  extensions:
+    - matklad.rust-analyzer
