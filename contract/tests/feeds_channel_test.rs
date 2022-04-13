@@ -1,7 +1,7 @@
 use codec::Encode;
 use gtest::{Program, System};
 #[path = "../src/common.rs"]
-mod common;
+pub mod common;
 use common::*;
 
 const OWNER: [u8; 32] = [1; 32];
