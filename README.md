@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://gitpod.io/#https://github.com/gear-tech/gear-feeds-channel">
+  <a href="https://gitpod.io/#https://github.com/gear-dapps/gear-feeds-channel">
     <img src="https://gitpod.io/button/open-in-gitpod.svg" width="240" alt="GEAR">
   </a>
 </p>
@@ -9,21 +9,21 @@
 [![Build][build_badge]][build_href]
 [![License][lic_badge]][lic_href]
 
-[build_badge]: https://github.com/gear-tech/gear-feeds-channel/workflows/Build/badge.svg
-[build_href]: https://github.com/gear-tech/gear-feeds-channel/actions/workflows/build.yml
+[build_badge]: https://github.com/gear-dapps/gear-feeds-channel/workflows/Build/badge.svg
+[build_href]: https://github.com/gear-dapps/gear-feeds-channel/actions/workflows/build.yml
 
 [lic_badge]: https://img.shields.io/badge/License-GPL%203.0-success
-[lic_href]: https://github.com/gear-tech/gear-feeds-channel/blob/master/LICENSE
+[lic_href]: https://github.com/gear-dapps/gear-feeds-channel/blob/master/LICENSE
 
 An example of a feeds channel program.
 
 ## Prebuilt Binaries
 
-➡️ https://github.com/gear-tech/gear-feeds-channel/releases/tag/build
+➡️ https://github.com/gear-dapps/gear-feeds-channel/releases/tag/build
 
-- Output WASM: [gear_feeds_channel.wasm](https://github.com/gear-tech/gear-feeds-channel/releases/download/build/gear_feeds_channel.wasm)
-- Optimized WASM: [gear_feeds_channel.opt.wasm](https://github.com/gear-tech/gear-feeds-channel/releases/download/build/gear_feeds_channel.opt.wasm)
-- Meta WASM: [gear_feeds_channel.meta.wasm](https://github.com/gear-tech/gear-feeds-channel/releases/download/build/gear_feeds_channel.meta.wasm)
+- Output WASM: [gear_feeds_channel.wasm](https://github.com/gear-dapps/gear-feeds-channel/releases/download/build/gear_feeds_channel.wasm)
+- Optimized WASM: [gear_feeds_channel.opt.wasm](https://github.com/gear-dapps/gear-feeds-channel/releases/download/build/gear_feeds_channel.opt.wasm)
+- Meta WASM: [gear_feeds_channel.meta.wasm](https://github.com/gear-dapps/gear-feeds-channel/releases/download/build/gear_feeds_channel.meta.wasm)
 
 ## Building Locally
 
